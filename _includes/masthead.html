@@ -1,21 +1,64 @@
 {% if site.layout == 'stacked' %}
-  {% assign metadata_styles = 'd-md-inline-block mr-3' %}
+{% assign metadata_styles = 'd-md-inline-block mr-3' %}
 {% else %}
-  {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
+{% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
 {% endif %}
 
-<img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
-<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
-<p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
-  {{ user.bio }}
-</p>
+<style>
+  code {
+    font-family: Consolas, "courier new";
+    color: rgb(220, 255, 220);
+    padding: 1px;
+    font-size: 100%;
+  }
 
-{% if include.metadata %}
-  <div class="f4 mb-6">
+  div.j {
+    text-align: justify;
+  }
+</style>
+<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">
+  Nikhil Phatak
+</h1>
+<div class="j">
+  <h2 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">
+    Me
+  </h2>
+  <p class="mb-3 f3 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+    Hi, I'm Nikhil. I'm a software and infrastructure engineer at <code>$CYBERSECURITY_FIRM</code>. I have previously
+    worked at <code>$TRAVEL_TECH_COMPANY</code> and <code>$DATABASE_TECH_COMPANY</code>. I also do freelance work: I set
+    up and automate lightweight software stacks for small companies. Feel free to fill in my
+    environment variables with some DuckDuckGo searches. For job opportunities and business inquiries, please
+    email me at <code>nikhilphatak1</code> AT <code>gmail</code> DOT <code>com</code>.
+  </p>
+</div>
 
+<br><br>
 
-    {% if user.hireable %}
-      <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
-    {% endif %}
-  </div>
-{% endif %}
+<div class="j">
+  <h2 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">
+    What I'm Great At
+  </h2>
+  <p class="mb-3 f3 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+    At work I write a lot of Scala, Java, Ruby/Rails, Bash, and Python.
+    In the past, I have developed applications using C/C++, Go, Rust, and Node.js.
+  </p>
+  <p class="mb-3 f3 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+    I am fluent in using infrastructure automation tools like Terraform, Docker, Jenkins, and Spinnaker.
+  </p>
+  <p class="mb-3 f3 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+    On a daily basis I work with technologies like Kafka, Redis, NGINX, ELK, MySQL, PostgreSQL, Debian
+    and Ubuntu Linux, and cloud providers AWS and Azure.
+  </p>
+</div>
+
+<br><br>
+
+<div class="j">
+  <h2 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">
+    About This Site
+  </h2>
+  <p class="mb-3 f3 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+    This site is intended to be lightweight. It doesn't require javascript to run. I may add links to other parts of my
+    web presence, but at the moment I have not done so. I'm sure you'll be able to find me either way.
+  </p>
+</div>
